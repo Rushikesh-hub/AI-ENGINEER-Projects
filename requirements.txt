@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+jupyter
+pdfplumber
+streamlit
+fastapi
+uvicorn
