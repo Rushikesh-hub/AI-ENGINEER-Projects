@@ -9,3 +9,9 @@ Day 2:
 - Analyzed resume lengths and data quality.
 - Created first EDA notebook.
 - Implemented basic data loading utility.
+
+Day 3:
+- Implemented resume text cleaning using regex.
+- Built TF-IDF vectorization pipeline.
+- Trained first NLP classification model.
+- Learned how text becomes numerical features.
