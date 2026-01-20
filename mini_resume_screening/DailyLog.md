@@ -15,3 +15,9 @@ Day 3:
 - Built TF-IDF vectorization pipeline.
 - Trained first NLP classification model.
 - Learned how text becomes numerical features.
+
+Day 4:
+- Built semantic resume classifier using sentence embeddings.
+- Learned how pretrained language models convert text into meaning vectors.
+- Trained Logistic Regression on embeddings and evaluated performance.
+- Saved trained classifier and embedding model configuration.
