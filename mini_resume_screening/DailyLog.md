@@ -21,3 +21,10 @@ Day 4:
 - Learned how pretrained language models convert text into meaning vectors.
 - Trained Logistic Regression on embeddings and evaluated performance.
 - Saved trained classifier and embedding model configuration.
+
+Day 5:
+- Built Streamlit UI for Resume Screening AI.
+- Loaded trained embedding classifier into an application.
+- Implemented real-time prediction from user input.
+- Learned difference between training pipeline and inference pipeline.
+
