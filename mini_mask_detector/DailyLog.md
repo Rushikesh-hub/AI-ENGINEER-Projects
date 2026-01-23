@@ -15,3 +15,4 @@ Day 8:
 - Built single-image prediction script.
 - Converted trained CNN to TorchScript for deployment.
 - Learned difference between training and production models.
+
