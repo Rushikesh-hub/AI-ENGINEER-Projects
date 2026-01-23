@@ -9,3 +9,9 @@ Day 7:
 - Implemented freezing of pretrained layers and custom classifier head.
 - Learned about loss functions, backpropagation, optimizers, and epochs.
 - Saved trained vision model for future inference.
+
+Day 8:
+- Implemented inference pipeline for mask detection.
+- Built single-image prediction script.
+- Converted trained CNN to TorchScript for deployment.
+- Learned difference between training and production models.
