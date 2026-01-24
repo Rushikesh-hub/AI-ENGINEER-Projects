@@ -16,3 +16,10 @@ Day 8:
 - Converted trained CNN to TorchScript for deployment.
 - Learned difference between training and production models.
 
+Day 9:
+- Built a Streamlit UI for face mask detection.
+- Integrated trained CNN into a user-facing application.
+- Enabled image upload and real-time prediction.
+- Learned how to turn ML models into interactive products.
+
+
