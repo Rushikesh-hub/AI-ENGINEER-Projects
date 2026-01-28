@@ -1,4 +1,21 @@
-# Virtual environment
+# Virtual environments
 venv/
+.env/
+
+# Large datasets
+*.csv
+*.zip
+
+# Model artifacts
+*.pkl
+*.pth
+*.onnx
+
+# Embeddings & indexes
+medium_news_reco/models/
+medium_churn/models/
+mini_mask_detector/models/
+
+# Python cache
 __pycache__/
 *.pyc
