@@ -9,3 +9,4 @@ Day 13:
 - Implemented query-to-embedding-to-result pipeline.
 - Built a functional news search engine based on vector similarity.
 - Learned how real-world retrieval systems operate.
+
