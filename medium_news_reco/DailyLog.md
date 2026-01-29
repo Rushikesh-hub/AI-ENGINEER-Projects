@@ -10,3 +10,8 @@ Day 13:
 - Built a functional news search engine based on vector similarity.
 - Learned how real-world retrieval systems operate.
 
+Day 14:
+- Implemented reranking using semantic similarity and recency signals.
+- Optimized system by loading FAISS index and model once.
+- Added diversity filtering to improve recommendation quality.
+- Learned ranking strategies used in real-world recommendation engines.
