@@ -15,3 +15,10 @@ Day 14:
 - Optimized system by loading FAISS index and model once.
 - Added diversity filtering to improve recommendation quality.
 - Learned ranking strategies used in real-world recommendation engines.
+
+
+Day 15:
+- Exposed semantic news recommender as a FastAPI service.
+- Added caching to optimize repeated queries.
+- Built Streamlit frontend for user interaction.
+- Connected UI → API → FAISS → ranked results.
