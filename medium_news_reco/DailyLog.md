@@ -22,3 +22,9 @@ Day 15:
 - Added caching to optimize repeated queries.
 - Built Streamlit frontend for user interaction.
 - Connected UI → API → FAISS → ranked results.
+
+Day 16:
+- Added structured logging for all recommendation requests.
+- Implemented basic usage metrics from API logs.
+- Designed retraining and index refresh workflow.
+- Documented monitoring and maintenance strategy.
