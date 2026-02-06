@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
 import joblib
+import logging
 from online_features import build_features
 
 MODEL_PATH = "../models/fraud_logreg.pkl"
@@ -12,6 +13,11 @@ FEATURE_ORDER = [
     "amt_ratio", "distance_km", "city_pop"
 ]
 
+logging.basicConfig(
+    filename="fraud_api.log",
+    level=logging.INFO,
+    format="%(asctime)s | %(message)s"
+)
 
 model = joblib.load(MODEL_PATH)
 
@@ -36,6 +42,10 @@ class Transaction(BaseModel):
 def score_transaction(tx: Transaction):
     tx = tx.dict()
 
+    logging.info(
+        f"cc={tx['cc_num']} | prob={prob:.3f} | decision ={decision} | reasons={reason}"
+    )
+    
     history = transaction_history.get(tx["cc_num"], pd.DataFrame())
     features = build_features(tx, history)
 

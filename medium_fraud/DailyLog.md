@@ -9,3 +9,14 @@ Day 18:
 - Handled extreme class imbalance using class-weighted models.
 - Trained Isolation Forest and supervised fraud detection models.
 
+Day 19:
+- Built real-time fraud scoring API using FastAPI.
+- Implemented online feature engineering with transaction history.
+- Added decision thresholds and alert logic.
+- Returned explainable fraud decisions with reasons.
+
+Day 20:
+- Added structured logging to fraud scoring API.
+- Built metrics pipeline to analyze fraud decisions.
+- Created real-time monitoring dashboard using Streamlit.
+- Implemented human labeling loop for future retraining.
