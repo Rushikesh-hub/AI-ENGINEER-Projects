@@ -6,6 +6,7 @@ import logging
 from online_features import build_features
 
 MODEL_PATH = "../models/fraud_logreg.pkl"
+FRAUD_THRESHOLD =0.7
 
 FEATURE_ORDER = [
     "amt", "age", "hour", "day_of_week",
@@ -67,7 +68,7 @@ def score_transaction(tx: Transaction):
     decision = "approve"
     reason = []
 
-    if prob > 0.7:
+    if prob > FRAUD_THRESHOLD:
         decision = "block"
         reason.append("High fraud probability")
 

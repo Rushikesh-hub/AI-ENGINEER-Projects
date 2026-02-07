@@ -36,7 +36,8 @@ def main():
     df["timestamp"] = pd.to_datetime(df["timestamp"])
     
     print("\nTotal transactions:", len(df))
-    print("Blocked transactions:", (df["decision"] == "block").sum())
+    block_rate = (df["decision"] == "block").mean()
+    print("Blocked transactions:",round(block_rate,4))
     print("Average fraud probability:", df["prob"].mean())
 
     print("\nTransactions per hour:")
