@@ -20,3 +20,9 @@ Day 20:
 - Built metrics pipeline to analyze fraud decisions.
 - Created real-time monitoring dashboard using Streamlit.
 - Implemented human labeling loop for future retraining.
+
+Day 21:
+- Connected fraud simulator, API, logging, and dashboard into full streaming pipeline.
+- Implemented historical replay for real-world evaluation.
+- Added configurable fraud threshold and block-rate monitoring.
+- Built complete end-to-end real-time fraud detection system.
