@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from api.auth import router as auth_router
+from api.documents import router as document_router
 
 app = FastAPI(title="AI Hiring Assistant")
 
-app.include_router(auth_router)
+app.include_router(document_router)
 
 
 @app.get("/")

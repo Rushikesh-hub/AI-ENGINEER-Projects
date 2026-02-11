@@ -11,3 +11,11 @@ class UserLogin(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+class DocumentOut(BaseModel):
+    id:int
+    filename:str
+    parsed_text:str | None
+
+    class Config:
+        form_attributes = True

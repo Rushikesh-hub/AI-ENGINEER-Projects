@@ -9,3 +9,4 @@ Day 23:
 - Created User model and Pydantic schemas.
 - Built secure password hashing and JWT authentication.
 - Added signup and login endpoints to FastAPI.
+
