@@ -10,3 +10,8 @@ Day 23:
 - Built secure password hashing and JWT authentication.
 - Added signup and login endpoints to FastAPI.
 
+Day 24:
+- Added Document database model with user relationship.
+- Implemented resume upload endpoint.
+- Integrated resume parsing service.
+- Stored parsed resume text in database.
