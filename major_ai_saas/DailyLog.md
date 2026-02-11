@@ -14,4 +14,4 @@ Day 24:
 - Added Document database model with user relationship.
 - Implemented resume upload endpoint.
 - Integrated resume parsing service.
-- Stored parsed resume text in database.
+- Stored parsed resume text in Database.
