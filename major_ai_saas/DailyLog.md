@@ -15,3 +15,8 @@ Day 24:
 - Implemented resume upload endpoint.
 - Integrated resume parsing service.
 - Stored parsed resume text in Database.
+
+Day 25:
+- Implemented Retrieval-Augmented Generation (RAG) pipeline.
+- Added resume chunking, embeddings, and FAISS vector search.
+- Built chat API to answer questions over uploaded resumes.
