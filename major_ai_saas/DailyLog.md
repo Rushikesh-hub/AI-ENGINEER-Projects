@@ -20,3 +20,8 @@ Day 25:
 - Implemented Retrieval-Augmented Generation (RAG) pipeline.
 - Added resume chunking, embeddings, and FAISS vector search.
 - Built chat API to answer questions over uploaded resumes.
+
+Day 26:
+- Implemented semantic job-candidate matching using embeddings.
+- Computed cosine similarity between job descriptions and resumes.
+- Built ranking API to return top matching candidates.
