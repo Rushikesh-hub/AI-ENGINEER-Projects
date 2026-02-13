@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from api.chat import router as chat_router
+from api.matching import router as matching_router
 
 app = FastAPI(title="AI Hiring Assistant")
 
-app.include_router(chat_router)
+app.include_router(matching_router)
 
 
 @app.get("/")
