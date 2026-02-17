@@ -25,3 +25,9 @@ Day 26:
 - Implemented semantic job-candidate matching using embeddings.
 - Computed cosine similarity between job descriptions and resumes.
 - Built ranking API to return top matching candidates.
+
+Day 28:
+- Dockerized FastAPI AI SaaS backend.
+- Added docker-compose for local container orchestration.
+- Implemented GitHub Actions CI pipeline.
+- Prepared system for real cloud deployment.
