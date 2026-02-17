@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+passlib[bcrypt]
+python-jose
+pdfplumber
+sentence-transformers
+faiss-cpu
+python-multipart
+email-validator
