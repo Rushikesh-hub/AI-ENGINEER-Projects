@@ -8,3 +8,5 @@ sentence-transformers
 faiss-cpu
 python-multipart
 email-validator
+pytest
+httpx
