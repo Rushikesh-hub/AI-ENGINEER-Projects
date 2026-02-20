@@ -32,3 +32,9 @@ Day 28:
 - Implemented GitHub Actions CI pipeline.
 - Prepared system for real cloud deployment.
 
+Day 29:
+- Added automated API tests using pytest.
+- Implemented performance middleware.
+- Secured API with CORS and environment variables.
+- Optimized Dockerfile for production.
+- Added health monitoring endpoint.
