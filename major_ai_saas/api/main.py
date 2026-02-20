@@ -5,43 +5,45 @@ import os
 
 # Import routers
 from api.auth import router as auth_router
-from api.resume import router as resume_router
-from api.jobs import router as jobs_router
-from api.match import router as match_router
+from api.documents import router as document_router
+from api.chat import router as chat_router
+from api.matching import router as matching_router
+from api.bulk import router as bulk_router
+from api.admin import router as admin_router
 
 
-# ==============================
-# App Initialization
-# ==============================
+# -------------------------------
+# Create FastAPI app
+# -------------------------------
 
 app = FastAPI(
-    title="Major AI SaaS",
-    description="AI Resume Matching & Job Recommendation System",
-    version="1.0.0"
+    title="AI Hiring Assistant",
+    description="AI SaaS for resume parsing, RAG chat, and job-candidate matching",
+    version="1.0.0",
 )
 
 
-# ==============================
-# CORS Configuration
-# ==============================
+# -------------------------------
+# CORS Configuration (Production Safe)
+# -------------------------------
 
 ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,  # Do NOT use "*" in production
+    allow_origins=ALLOWED_ORIGINS,  # Never use "*" in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-# ==============================
-# Middleware - Request Timing
-# ==============================
+# -------------------------------
+# Request Timing Middleware
+# -------------------------------
 
 @app.middleware("http")
-async def add_process_time(request: Request, call_next):
+async def add_process_time_header(request: Request, call_next):
     start_time = time.time()
     response = await call_next(request)
     process_time = time.time() - start_time
@@ -49,39 +51,52 @@ async def add_process_time(request: Request, call_next):
     return response
 
 
-# ==============================
-# Health Endpoints
-# ==============================
+# -------------------------------
+# Root Endpoint
+# -------------------------------
 
 @app.get("/")
 async def root():
-    return {"message": "Major AI SaaS is running 🚀"}
+    return {
+        "message": "AI Hiring Assistant API running",
+        "status": "healthy"
+    }
 
+
+# -------------------------------
+# Health Endpoint (Cloud Standard)
+# -------------------------------
 
 @app.get("/health")
 async def health():
     return {"status": "ok"}
 
 
-# ==============================
-# Include Routers
-# ==============================
+# -------------------------------
+# Include Feature Routers
+# -------------------------------
 
-app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
-app.include_router(resume_router, prefix="/resume", tags=["Resume"])
-app.include_router(jobs_router, prefix="/jobs", tags=["Jobs"])
-app.include_router(match_router, prefix="/match", tags=["Matching"])
+app.include_router(auth_router)        # Day 23 — Auth
+app.include_router(document_router)    # Day 24 — Resume upload
+app.include_router(chat_router)        # Day 25 — RAG chat
+app.include_router(matching_router)    # Day 26 — Job matching
+app.include_router(bulk_router)        # Day 27 — Bulk processing
+app.include_router(admin_router)       # Day 27 — Admin stats
 
 
-# ==============================
-# Startup Event (Optional)
-# ==============================
+# -------------------------------
+# Startup Event
+# -------------------------------
 
 @app.on_event("startup")
 async def startup_event():
-    print("🚀 Major AI SaaS starting...")
+    print("🚀 AI Hiring Assistant API started successfully")
 
+
+# -------------------------------
+# Shutdown Event
+# -------------------------------
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    print("🛑 Major AI SaaS shutting down...")
+    print("🛑 AI Hiring Assistant API shutting down")
