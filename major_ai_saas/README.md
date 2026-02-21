@@ -172,6 +172,6 @@ DATABASE_URL=sqlite:///./app.db
 ---
 
 ## 👨‍💻 Author
-
+#
 **Rushikesh Muneshwar**  
 *AI Engineer | FastAPI | RAG Systems | Production ML*
